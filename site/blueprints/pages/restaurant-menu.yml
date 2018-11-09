@@ -1,0 +1,22 @@
+title: Restaurant Menu
+icon: 🍕
+
+options:
+  status: false
+
+fields:
+  starters:
+    extends: fields/dishes
+    label: Starters
+
+  pasta:
+    extends: fields/dishes
+    label: Pasta
+
+  meat:
+    extends: fields/dishes
+    label: Meat
+
+  desert:
+    extends: fields/dishes
+    label: Desert

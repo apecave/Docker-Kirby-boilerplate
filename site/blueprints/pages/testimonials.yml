@@ -1,0 +1,16 @@
+title: Testimonials
+preset: pages
+
+icon: 👫
+
+options:
+  status: false
+
+drafts:
+  headline: Unpublished Tweets
+  template: testimonial
+  info: "@{{ page.username }}"
+
+listed:
+  headline: Published Tweets
+  info: "@{{ page.username }}"

@@ -1,0 +1,34 @@
+version: '2'
+
+volumes:
+  content-stg:
+    external:
+      name: ${CONTAINERVOLUME}-content-stg
+  thumbs-stg:
+    external:
+      name: ${CONTAINERVOLUME}-thumbs-stg
+  accounts:
+    external:
+      name: ${CONTAINERVOLUME}-accounts
+
+services:
+  webapp:
+    build: .
+    image: ${IMAGENAME}
+    volumes:
+      - ${CONTAINERVOLUME}-content-stg:/app/content
+      - ${CONTAINERVOLUME}-thumbs-stg:/app/thumbs
+      - ${CONTAINERVOLUME}-accounts:/app/site/accounts
+    environment:
+      VIRTUAL_HOST: ${STG_VIRTUAL_HOST}
+      ENABLE_PANEL: ${STG_ENABLE_PANEL}
+      ENABLE_PW: ${STG_ENABLE_PW}
+      LETSENCRYPT_HOST: ${STG_LETSENCRYPT_HOST}
+      LETSENCRYPT_EMAIL: ${STG_LETSENCRYPT_EMAIL}
+    container_name: ${CONTAINERNAME}-stg
+    restart: always
+
+networks:
+  default:
+    external:
+      name: ${NETWORKNAME}

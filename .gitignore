@@ -1,0 +1,24 @@
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+# Kirby #
+/public/media
+/storage/*
+# /vendor. ##. committing this folder to avoid integrating composer with docker
+
+# Custom #
+######################
+node_modules
+private-notes.md
+.sass-cache
+/*.sublime-project
+/*.sublime-workspace
+

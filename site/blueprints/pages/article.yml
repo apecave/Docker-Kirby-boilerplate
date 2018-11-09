@@ -1,0 +1,40 @@
+title: Article
+preset: page
+num: date
+icon: 📖
+
+status:
+  draft:
+    label: Draft
+    text: The article is still in draft mode. It can only be seen by editors with panel access.
+  unlisted:
+    label: In Review
+    text: The article is online and can be visited with the direct URL. The team must still give the final go to publish it.
+  listed:
+    label: Published
+    text: The article is online and listed in the blog
+
+fields:
+  text:
+    type: textarea
+    size: large
+
+sidebar:
+  meta:
+    type: fields
+    fields:
+      date:
+        type: date
+        time: true
+        default: now
+      author:
+        type: users
+      tags:
+        type: tags
+        options: query
+        query:
+          fetch: site.tags.toStructure.sortBy("name", "asc")
+          text: "{{ structureItem.name }}"
+          value: "{{ structureItem.value }}"
+  images:
+    extends: sections/images

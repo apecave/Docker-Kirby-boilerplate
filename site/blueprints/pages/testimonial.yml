@@ -1,0 +1,26 @@
+title: Testimonials
+preset: page
+num: zero
+
+fields:
+  username:
+    label: Username
+    type:  text
+    before: "@"
+    icon:  user
+  tweet:
+    label: Tweet
+    type:  text
+    icon:  twitter
+  text:
+    label: Text
+    type:  textarea
+    icon:  file-text-o
+    size: large
+
+sidebar:
+  image:
+    extends: sections/image
+    min: 1
+    image:
+      ratio: 1/1

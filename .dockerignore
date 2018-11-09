@@ -1,0 +1,17 @@
+## remove these directory to make lighter
+.git
+.gitignore
+
+# Kirby #
+/public/media
+/storage/*
+content/*
+
+node_modules
+.sass-cache
+redirects
+
+## files
+*.sublime-project
+*.sublime-workspace
+private-notes.md

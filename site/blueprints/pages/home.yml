@@ -1,0 +1,25 @@
+title: Home
+
+options:
+  url: false
+  status: false
+  delete: false
+
+sections:
+  content:
+    type: fields
+    fields:
+      intro:
+        label: Intro
+        type: textarea
+      text:
+        label: Text
+        type: textarea
+      line:
+        type: line
+
+  projects:
+    extends: sections/projects
+    headline: Latest projects
+    status: listed
+    limit: 3

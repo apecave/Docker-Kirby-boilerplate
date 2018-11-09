@@ -1,0 +1,19 @@
+title: One Pager
+
+icon: 📔
+
+options:
+  status: false
+
+sections:
+  sections:
+    headline: Sections
+    type: pages
+    status: all
+    item:
+      info: "{{ page.template }}"
+    templates:
+      - one-pager-headline-section
+      - one-pager-gallery-section
+      - one-pager-text-section
+      - one-pager-video-section

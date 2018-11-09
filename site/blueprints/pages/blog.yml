@@ -1,0 +1,21 @@
+title: Blog
+preset: pages
+
+icon: 📜
+
+options:
+  url: false
+  status: false
+  delete: false
+
+drafts:
+  extends: sections/articles
+  headline: Unpublished articles
+
+unlisted:
+  extends: sections/articles
+  headline: Articles in review
+
+listed:
+  extends: sections/articles
+  headline: Published articles

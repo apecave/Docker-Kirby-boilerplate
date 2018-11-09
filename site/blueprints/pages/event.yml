@@ -1,0 +1,26 @@
+title: Event
+icon: 📅
+num: "{{ page.from.toDate('Ymd') }}"
+
+fields:
+  from:
+    label: Start
+    type: date
+    width: 1/2
+    default: today
+  to:
+    label: End
+    type: date
+    width: 1/2
+    default: today + 1day
+  location:
+    label: Location
+    type: text
+    width: 1/2
+  link:
+    label: Link
+    type: url
+    width: 1/2
+  text:
+    label: Description
+    type: textarea

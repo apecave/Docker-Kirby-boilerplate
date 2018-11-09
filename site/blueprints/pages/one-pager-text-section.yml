@@ -1,0 +1,10 @@
+title: Text Section
+
+icon: text
+
+fields:
+  text:
+    label: Text
+    type: textarea
+
+

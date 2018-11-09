@@ -1,0 +1,14 @@
+{
+  "name": "getkirby/devkit",
+  "description": "Kirby Dev Kit",
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/k-next/kirby"
+    }
+  ],
+  "require": {
+    "getkirby/cms": "3.0.*"
+  },
+  "minimum-stability": "beta"
+}

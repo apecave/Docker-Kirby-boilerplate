@@ -1,0 +1,36 @@
+version: '2'
+
+volumes:
+  content-prod:
+    external:
+      name: ${CONTAINERVOLUME}-content-prod
+  thumbs-prod:
+    external:
+      name: ${CONTAINERVOLUME}-thumbs-prod
+  accounts:
+    external:
+      name: ${CONTAINERVOLUME}-accounts
+
+services:
+  webapp:
+    #no build directive to prevent accidental builds
+    #use `docker build -t {IMAGENAME} .`
+    #use value for IMAGENAME from .env file
+    image: ${IMAGENAME}
+    volumes:
+      - ${CONTAINERVOLUME}-content-prod:/app/content
+      - ${CONTAINERVOLUME}-thumbs-prod:/app/thumbs
+      - ${CONTAINERVOLUME}-accounts:/app/site/accounts
+    environment:
+      VIRTUAL_HOST: ${PROD_VIRTUAL_HOST}
+      ENABLE_PANEL: ${PROD_ENABLE_PANEL}
+      ENABLE_PW: ${PROD_ENABLE_PW}
+      LETSENCRYPT_HOST: ${PROD_LETSENCRYPT_HOST}
+      LETSENCRYPT_EMAIL: ${PROD_LETSENCRYPT_EMAIL}
+    container_name: ${CONTAINERNAME}-prod
+    restart: always
+
+networks:
+  default:
+    external:
+      name: proxy-network

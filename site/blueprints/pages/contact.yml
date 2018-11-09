@@ -1,0 +1,49 @@
+title: Contact
+
+icon: ☎️
+
+options:
+  url: false
+  status: false
+  delete: false
+
+fields:
+
+  intro:
+    label: Intro
+    type: textarea
+  contactoptions:
+    label: Contact Options
+    type: structure
+    fields:
+      title:
+        label: Title
+        type: text
+        width: 1/2
+      text:
+        label: Text
+        type: text
+        width: 1/2
+      url:
+        label: URL
+        type: text
+        icon: chain
+        width: 1/2
+      linktext:
+        label: Link Text
+        type: text
+        width: 1/2
+  twitter:
+    label: Follow the Kirby Team on Twitter …
+    type: structure
+    fields:
+      name:
+        label: Team Member
+        type: text
+        width: 1/2
+      twitter:
+        label: Twitter Username
+        before: "@"
+        type: text
+        icon: twitter
+        width: 1/2

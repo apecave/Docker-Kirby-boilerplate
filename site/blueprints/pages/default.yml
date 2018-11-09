@@ -1,0 +1,11 @@
+title: Default
+preset: page
+
+fields:
+  intro:
+    type: textarea
+    size: medium
+  text:
+    type: textarea
+    size: large
+
